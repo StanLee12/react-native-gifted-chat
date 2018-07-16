@@ -2,10 +2,6 @@ import React from 'react';
 import { TextInput as Input } from 'react-native';
 
 export default class TextInput extends React.Component {
-    static defaultProps = {
-        onFocus: () => { },
-    }
-
     constructor(props) {
         super(props);
 
@@ -29,11 +25,9 @@ export default class TextInput extends React.Component {
         }
     }
 
-    onFocus = (e) => {
+    focus = () => {
         this.input.focus();
-
-        this.props.onFocus();
-    }
+    };
 
     clear = () => {
         this.input.clear();
@@ -49,7 +43,6 @@ export default class TextInput extends React.Component {
                 {...this.props}
                 ref={(ref) => { this.input = ref; }}
                 value={this.state.value}
-                onFocus={this.onFocus}
             />
         );
     }
