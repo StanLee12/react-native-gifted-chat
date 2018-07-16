@@ -2,7 +2,8 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Platform, StyleSheet, TextInput } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
+import CustomTextInput from './CustomTextInput';
 
 import { MIN_COMPOSER_HEIGHT, DEFAULT_PLACEHOLDER } from './Constant';
 import Color from './Color';
@@ -31,7 +32,7 @@ export default class Composer extends React.Component {
 
   render() {
     return (
-      <TextInput
+      <CustomTextInput
         testID={this.props.placeholder}
         accessible
         accessibilityLabel={this.props.placeholder}
