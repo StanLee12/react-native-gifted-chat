@@ -95,7 +95,7 @@ Composer.propTypes = {
   onTextChanged: PropTypes.func,
   onInputSizeChanged: PropTypes.func,
   multiline: PropTypes.bool,
-  textInputStyle: TextInput.propTypes.style,
+  textInputStyle: CustomTextInput.propTypes.style,
   textInputAutoFocus: PropTypes.bool,
   keyboardAppearance: PropTypes.string,
 };
