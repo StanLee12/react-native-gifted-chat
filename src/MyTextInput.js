@@ -7,7 +7,6 @@ export default class TextInput extends React.Component {
 
         this.state = {
             value: this.props.value,
-            refresh: false,
         };
     }
 
@@ -19,12 +18,6 @@ export default class TextInput extends React.Component {
         return true;
     }
 
-    componentDidUpdate(prevProps) {
-        if (prevProps.value !== this.props.value && this.props.value === '') {
-            this.setState({ value: '', refresh: true }, () => this.setState({ refresh: false }));
-        }
-    }
-
     focus = () => {
         this.input.focus();
     };
@@ -34,10 +27,6 @@ export default class TextInput extends React.Component {
     };
 
     render() {
-        if (this.state.refresh) {
-            return null;
-        }
-
         return (
             <Input
                 {...this.props}
