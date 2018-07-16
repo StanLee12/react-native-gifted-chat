@@ -2,7 +2,7 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Platform, StyleSheet } from 'react-native';
+import { Platform, StyleSheet, TextInput } from 'react-native';
 import CustomTextInput from './CustomTextInput';
 
 import { MIN_COMPOSER_HEIGHT, DEFAULT_PLACEHOLDER } from './Constant';
@@ -95,7 +95,7 @@ Composer.propTypes = {
   onTextChanged: PropTypes.func,
   onInputSizeChanged: PropTypes.func,
   multiline: PropTypes.bool,
-  textInputStyle: CustomTextInput.propTypes.style,
+  textInputStyle: TextInput.propTypes.style,
   textInputAutoFocus: PropTypes.bool,
   keyboardAppearance: PropTypes.string,
 };
